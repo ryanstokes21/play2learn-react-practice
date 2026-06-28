@@ -1,15 +1,19 @@
 import Button from '../Common/Button';
+import GameOver from '../Common/GameOver';
 
 function MathFactsGame() {
+  let operation = 'Addition';
+  let score = 0;
   let timeLeft = 0;
   if (timeLeft === 0) {
     return (
       <main>
-        <h1>Math Facts</h1>
-        <p>Operation</p>
-        <p>Times Up!</p>
-        <p>Your final score is:</p>
-        <p>7</p>
+        <GameOver
+          gameTitle="Math Facts"
+          operation={operation}
+          scoreMessage="Your final score is:"
+          score={score}
+        />
         <Button to="/math-facts" children="Play Again" />
         <Button to="/" children="Back to Start Screen" />
       </main>

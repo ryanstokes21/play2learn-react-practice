@@ -1,17 +1,18 @@
 import Button from '../Common/Button';
+import GameOver from '../Common/GameOver';
 
 function AnagramHuntGame() {
+  let score = 0;
   let timeLeft = 0;
   if (timeLeft === 0) {
     return (
       <main>
-        <h1>Anagram Hunt</h1>
-        <div>
-          <p>Times Up!</p>
-          <p>you got</p>
-          <p>score</p>
-          <p>Anagrams</p>
-        </div>
+        <GameOver
+          gameTitle="Anagram Hunt"
+          scoreMessage="You Got:"
+          score={score}
+          scoreUnit="Anagrams"
+        />
         <Button to="/anagram-hunt" children="Play Again" />
         <Button to="/" children="Back to Start Screen" />
       </main>

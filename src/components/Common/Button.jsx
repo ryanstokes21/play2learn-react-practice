@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
 function Button({ to, children }) {
-  return <Link to={to}>{children}</Link>;
+  return (
+    <div>
+      <Link to={to}>{children}</Link>
+    </div>
+  );
 }
 
 export default Button;
