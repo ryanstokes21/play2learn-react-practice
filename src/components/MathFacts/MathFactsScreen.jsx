@@ -1,23 +1,37 @@
 import Button from '../Common/Button';
+import SelectInput from '../Common/SelectInput';
 
-function MathFactsScreen() {
+function MathFactsScreen(props) {
+  const operations = [
+    ['Addition', '+'],
+    ['Subtraction', '-'],
+    ['Multiplication', 'x'],
+    ['Division', '÷'],
+  ];
+
+  const numbers = [];
+  for (let number = 1; number <= 50; number++) {
+    numbers.push([number, number]);
+  }
+
   return (
     <main>
       <h1>Math Facts</h1>
-      <div>
-        <label htmlFor="operation">Operation</label>
-        <select name="operation" id="operation">
-          <option value="addition">Addition</option>
-          <option value="Subtraction">Subtraction</option>
-          <option value="Multiplication">Multiplication</option>
-        </select>
-      </div>
-      <div>
-        <label htmlFor="maxNumber">Maximum Number</label>
-        <select name="maxNumber" id="maxNumber">
-          <option value="1">loop to get numbers</option>
-        </select>
-      </div>
+      <SelectInput
+        label="Operation"
+        id="operation"
+        currentValue={props.operation}
+        setCurrentValue={props.setOperation}
+        values={operations}
+      />
+
+      <SelectInput
+        label="Maximum Number"
+        id="max-number"
+        currentValue={props.maxNumber}
+        setCurrentValue={props.setMaxNumber}
+        values={numbers}
+      />
       <Button to="/math-facts-game" children="go" />
       <div>
         <ol>
