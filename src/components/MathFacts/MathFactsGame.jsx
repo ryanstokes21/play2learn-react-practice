@@ -5,7 +5,7 @@ function MathFactsGame() {
   if (timeLeft === 0) {
     return (
       <main>
-        <h2>Math Facts</h2>
+        <h1>Math Facts</h1>
         <p>Operation</p>
         <p>Times Up!</p>
         <p>Your final score is:</p>
@@ -18,7 +18,7 @@ function MathFactsGame() {
 
   return (
     <main>
-      <h2>Math Facts</h2>
+      <h1>Math Facts</h1>
       <p>Operation</p>
       <p>2 + 2</p>
       <input type="text" readOnly />

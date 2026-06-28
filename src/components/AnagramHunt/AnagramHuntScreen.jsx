@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function AnagramHuntScreen() {
   return (
     <main>
-      <h2>Anagram Hunt</h2>
+      <h1>Anagram Hunt</h1>
       <div>
         <label htmlFor="wLength">Word Length</label>
         <select id="wLength">

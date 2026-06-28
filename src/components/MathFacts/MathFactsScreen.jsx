@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function MathFactsScreen() {
   return (
     <main>
-      <h2>Math Facts</h2>
+      <h1>Math Facts</h1>
       <div>
         <label htmlFor="operation">Operation</label>
         <select name="operation" id="operation">

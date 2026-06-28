@@ -5,7 +5,7 @@ function AnagramHuntGame() {
   if (timeLeft === 0) {
     return (
       <main>
-        <h2>Anagram Hunt</h2>
+        <h1>Anagram Hunt</h1>
         <div>
           <p>Times Up!</p>
           <p>you got</p>
@@ -20,7 +20,7 @@ function AnagramHuntGame() {
 
   return (
     <main>
-      <h2>Anagram Hunt</h2>
+      <h1>Anagram Hunt</h1>
       <div>
         <p>Score: 1</p>
         <p>Time Left: {timeLeft}</p>
