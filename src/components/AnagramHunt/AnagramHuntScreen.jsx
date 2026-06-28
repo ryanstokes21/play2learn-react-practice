@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function AnagramHuntScreen() {
   return (
     <main>
@@ -19,7 +21,7 @@ function AnagramHuntScreen() {
           <li>How many anagrams can you find in a minute?</li>
         </ol>
       </div>
-      <button>Play</button>
+      <Link to="/AnagramHuntGame">Play</Link>
     </main>
   );
 }

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function MathFactsScreen() {
   return (
     <main>
@@ -16,7 +18,7 @@ function MathFactsScreen() {
           <option value="1">loop to get numbers</option>
         </select>
       </div>
-      <button>Go</button>
+      <Link to="/MathFactsGame">Go</Link>
       <div>
         <ol>
           <li>Choose Operation</li>

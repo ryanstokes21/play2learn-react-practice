@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function MathFactsGame() {
   let timeLeft = 30;
   if (timeLeft === 0) {
@@ -8,8 +10,8 @@ function MathFactsGame() {
         <p>Times Up!</p>
         <p>Your final score is:</p>
         <p>7</p>
-        <button>Play Again</button>
-        <button>Start Screen</button>
+        <Link to="/MathFacts">Play Again</Link>
+        <Link to="/">Start Screen</Link>
       </main>
     );
   }
@@ -34,7 +36,7 @@ function MathFactsGame() {
         <button>Clear</button>
       </div>
       <p>score: 0</p>
-      <p>Time Left: 60</p>
+      <p>Time Left: {timeLeft}</p>
     </main>
   );
 }

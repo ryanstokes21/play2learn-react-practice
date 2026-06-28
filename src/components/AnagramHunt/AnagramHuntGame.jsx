@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function AnagramHuntGame() {
   let timeLeft = 60;
   if (timeLeft === 0) {
@@ -10,8 +12,8 @@ function AnagramHuntGame() {
           <p>score</p>
           <p>Anagrams</p>
         </div>
-        <button>Play Again</button>
-        <button>Start Screen</button>
+        <Link to="/AnagramHunt">Play Again</Link>
+        <Link to="/">Start Screen</Link>
       </main>
     );
   }
@@ -21,7 +23,7 @@ function AnagramHuntGame() {
       <h2>Anagram Hunt</h2>
       <div>
         <p>Score: 1</p>
-        <p>Time Left: 60</p>
+        <p>Time Left: {timeLeft}</p>
       </div>
       <div>
         <p>Anagram(# of anagrams left)</p>
