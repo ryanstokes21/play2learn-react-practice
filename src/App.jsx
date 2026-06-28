@@ -10,10 +10,10 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<StartScreen />} />
-      <Route path="/AnagramHunt" element={<AnagramHuntScreen />} />
-      <Route path="/AnagramHuntGame" element={<AnagramHuntGame />} />
-      <Route path="/MathFacts" element={<MathFactsScreen />} />
-      <Route path="/MathFactsGame" element={<MathFactsGame />} />
+      <Route path="/anagram-hunt" element={<AnagramHuntScreen />} />
+      <Route path="/anagram-hunt-game" element={<AnagramHuntGame />} />
+      <Route path="/math-facts" element={<MathFactsScreen />} />
+      <Route path="/math-facts-game" element={<MathFactsGame />} />
     </Routes>
   );
 }

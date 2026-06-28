@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
+import Button from '../Common/Button';
 
 function MathFactsGame() {
-  let timeLeft = 30;
+  let timeLeft = 0;
   if (timeLeft === 0) {
     return (
       <main>
@@ -10,8 +10,8 @@ function MathFactsGame() {
         <p>Times Up!</p>
         <p>Your final score is:</p>
         <p>7</p>
-        <Link to="/MathFacts">Play Again</Link>
-        <Link to="/">Start Screen</Link>
+        <Button to="/math-facts" children="Play Again" />
+        <Button to="/" children="Back to Start Screen" />
       </main>
     );
   }

@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
+import Button from '../Common/Button';
 
 function AnagramHuntGame() {
-  let timeLeft = 60;
+  let timeLeft = 0;
   if (timeLeft === 0) {
     return (
       <main>
@@ -12,8 +12,8 @@ function AnagramHuntGame() {
           <p>score</p>
           <p>Anagrams</p>
         </div>
-        <Link to="/AnagramHunt">Play Again</Link>
-        <Link to="/">Start Screen</Link>
+        <Button to="/anagram-hunt" children="Play Again" />
+        <Button to="/" children="Back to Start Screen" />
       </main>
     );
   }

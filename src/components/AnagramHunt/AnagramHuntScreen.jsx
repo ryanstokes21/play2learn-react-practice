@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Button from '../Common/Button';
 
 function AnagramHuntScreen() {
   return (
@@ -21,7 +21,7 @@ function AnagramHuntScreen() {
           <li>How many anagrams can you find in a minute?</li>
         </ol>
       </div>
-      <Link to="/AnagramHuntGame">Play</Link>
+      <Button to="/anagram-hunt-game" children="Play" />
     </main>
   );
 }

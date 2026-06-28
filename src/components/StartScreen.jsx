@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Button from './Common/Button';
 
 function StartScreen() {
   return (
@@ -13,14 +13,14 @@ function StartScreen() {
           recognize anagrams in a word with this neat little game.
         </p>
         <div className="button-section">
-          <Link to="/AnagramHunt">play</Link>
+          <Button to="/anagram-hunt" children="play" />
         </div>
       </div>
       <div className="card">
         <h2>Math Facts</h2>
         <p>Improve your mental math skills with this game.</p>
         <div className="button-section">
-          <Link to="/MathFacts">play</Link>
+          <Button to="/math-facts" children="play" />
         </div>
       </div>
     </main>
