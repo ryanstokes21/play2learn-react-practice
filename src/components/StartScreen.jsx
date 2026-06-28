@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 function StartScreen() {
   return (
     <main>
+      <h1>
+        Play<span>2</span>Learn
+      </h1>
       <div className="card">
         <h2>Anagram Hunt</h2>
         <p>
