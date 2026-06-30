@@ -1,9 +1,11 @@
 import Button from '../Common/Button';
 import GameOver from '../Common/GameOver';
+import ScoreDisplay from '../Common/ScoreDisplay';
+import TimeLeft from '../Common/TimeLeft';
 
 function AnagramHuntGame() {
   let score = 0;
-  let timeLeft = 0;
+  let timeLeft = 30;
   if (timeLeft === 0) {
     return (
       <main>
@@ -23,8 +25,8 @@ function AnagramHuntGame() {
     <main>
       <h1>Anagram Hunt</h1>
       <div>
-        <p>Score: 1</p>
-        <p>Time Left: {timeLeft}</p>
+        <ScoreDisplay score={score} />
+        <TimeLeft timeLeft={timeLeft} />
       </div>
       <div>
         <p>Anagram(# of anagrams left)</p>

@@ -1,7 +1,15 @@
 import Button from '../Common/Button';
 import SelectInput from '../Common/SelectInput';
+import GameInstructions from '../Common/GameInstructions';
 
 function MathFactsScreen(props) {
+  const instructions = [
+    'Choose Operation',
+    'Choose Max Number',
+    'Press Go',
+    'How many problems can you solve in 30 seconds?',
+  ];
+
   const operations = [
     ['Addition', '+'],
     ['Subtraction', '-'],
@@ -33,16 +41,7 @@ function MathFactsScreen(props) {
         values={numbers}
       />
       <Button to="/math-facts-game" children="go" />
-      <div>
-        <ol>
-          <li>Choose Operation</li>
-          <li>Choose Max Number</li>
-          <li>
-            Press <strong>Go</strong>
-          </li>
-          <li>How many problems can you solve in 30 seconds?</li>
-        </ol>
-      </div>
+      <GameInstructions instructions={instructions} />
     </main>
   );
 }

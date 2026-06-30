@@ -1,26 +1,32 @@
 import Button from '../Common/Button';
+import GameInstructions from '../Common/GameInstructions';
+import SelectInput from '../Common/SelectInput';
 
-function AnagramHuntScreen() {
+function AnagramHuntScreen({ wordLength, setWordLength }) {
+  const instructions = [
+    'Choose Word Length.',
+    'Press Play!',
+    'Press <strong>Play!',
+  ];
+
+  const wordLengths = [
+    ['5 Letters', '5'],
+    ['6 Letters', '6'],
+    ['7 Letters', '7'],
+    ['8 Letters', '8'],
+  ];
+
   return (
     <main>
       <h1>Anagram Hunt</h1>
-      <div>
-        <label htmlFor="wLength">Word Length</label>
-        <select id="wLength">
-          <option value="5">5</option>
-          <option value="7">7</option>
-          <option value="9">9</option>
-        </select>
-      </div>
-      <div>
-        <ol>
-          <li>Choose Word Length.</li>
-          <li>
-            Press <strong>Play!</strong>
-          </li>
-          <li>How many anagrams can you find in a minute?</li>
-        </ol>
-      </div>
+      <SelectInput
+        label="Word Length"
+        id="wLength"
+        currentValue={wordLength}
+        setCurrentValue={setWordLength}
+        values={wordLengths}
+      />
+      <GameInstructions instructions={instructions} />
       <Button to="/anagram-hunt-game" children="Play" />
     </main>
   );
