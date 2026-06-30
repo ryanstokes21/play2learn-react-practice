@@ -2,7 +2,7 @@ import Button from '../Common/Button';
 import GameOver from '../Common/GameOver';
 import ScoreDisplay from '../Common/ScoreDisplay';
 import TimeLeft from '../Common/TimeLeft';
-import Keyboard from './Keyboard';
+import NumberKeypad from './NumberKeypad';
 
 function MathFactsGame() {
   let operation = 'Addition';
@@ -29,7 +29,7 @@ function MathFactsGame() {
       <p>Operation</p>
       <p>2 + 2</p>
       <input type="text" readOnly />
-      <Keyboard />
+      <NumberKeypad />
       <ScoreDisplay score={score} />
       <TimeLeft timeLeft={timeLeft} />
     </main>
